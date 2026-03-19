@@ -17,6 +17,9 @@ Or you just need cofigure using cmake extensions on visual studio code.
 
 Wait until done!
 
+# Now copy res folder into build folder
+Please do this before run the engine!
+
 Now run it.
 
 ```./engine```
