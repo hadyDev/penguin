@@ -1,6 +1,8 @@
 # penguin
 Engine base on opengl!
 
+Some os/distro dont have some libs, you need to install some libs. compile first after that check you have any error and give output to gemini/ai to help you find missing libs!
+
 # How to install
 ```git clone https://github.com/hadyDev/penguin.git```
 
