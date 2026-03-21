@@ -1,5 +1,6 @@
-#include<global/glfw/glfw.h>
+#include<glad/glad.h>
 #include<GLFW/glfw3.h>
+#include<global/glfw/glfw.h>
 #include<iostream>
 
 
@@ -30,10 +31,19 @@ namespace global::glfw{
         }
         glfwMakeContextCurrent(g_window);
 
+        if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
+        {
+            std::cout << "Failed to initialize GLAD" << std::endl;
+            return false;
+        }
+
+        glClearColor(0,0,0,1);
+
         return true;
     }
 
     void begin(){
+        glClear(GL_COLOR_BUFFER_BIT);
         glfwSwapBuffers(g_window);
     }
 
