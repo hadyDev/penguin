@@ -3,10 +3,10 @@
 #include<iostream>
 
 namespace global{
-    
 
+    
     bool init(windowMode mode){
-        std::cout<<"Global init"<<std::endl;
+        std::cout<<"Global init\n";
 
         glfw::init(mode);
 
@@ -25,7 +25,7 @@ namespace global{
     }
     
     void cleanUp(){
-        std::cout<<"Global cleanUp"<<std::endl;
+        std::cout<<"Global cleanUp\n";
 
         glfw::cleanUp();
     }   
