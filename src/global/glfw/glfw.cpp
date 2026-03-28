@@ -1,6 +1,6 @@
 #include<glad/glad.h>
 #include<GLFW/glfw3.h>
-#include<global/glfw/glfw.h>
+#include"global/glfw/glfw.h"
 #include<iostream>
 
 
@@ -12,6 +12,8 @@ namespace global::glfw{
     int g_w = 800;
     int g_h = 600;
     const char* g_title = "penguin";
+
+    void kill();
 
     bool init(windowMode mode){
         g_mode = mode;
@@ -56,6 +58,8 @@ namespace global::glfw{
     void begin(){
         glClear(GL_COLOR_BUFFER_BIT);
         glfwSwapBuffers(g_window);
+
+        kill();
     }
 
     void end(){
@@ -69,5 +73,11 @@ namespace global::glfw{
     //get
     bool get_windowIsOpen(){
         return glfwWindowShouldClose(g_window);
+    }
+
+    void kill(){
+        if(glfwGetKey(g_window, GLFW_KEY_ESCAPE)){
+            glfwSetWindowShouldClose(g_window, 1);
+        }
     }
 };

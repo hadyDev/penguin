@@ -2,7 +2,7 @@
 #include<global/global.h>
 
 int main(){
-    global::init(windowMode::FULLSREEN);
+    global::init(windowMode::WINDOWED);
 
     while(!global::get_windowIsOpen()){
         global::begin();

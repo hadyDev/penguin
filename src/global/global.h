@@ -1,5 +1,5 @@
 #pragma once 
-#include<types/penguinEnums.h>
+#include"enums/penguinEnums.h"
 
 namespace global{
     bool init(windowMode mode);

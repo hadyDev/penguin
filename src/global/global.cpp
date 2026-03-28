@@ -1,5 +1,5 @@
-#include<global/global.h>
-#include<global/glfw/glfw.h>
+#include"global/global.h"
+#include"global/glfw/glfw.h"
 #include<iostream>
 
 namespace global{
@@ -8,7 +8,9 @@ namespace global{
     bool init(windowMode mode){
         std::cout<<"Global init\n";
 
-        glfw::init(mode);
+        if(!glfw::init(mode)){
+            return false;
+        }
 
         return true;
     }
